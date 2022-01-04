@@ -15,10 +15,10 @@ const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: 'Ubuntu, sans-serif',
-        h1: {
-            fontFamily: ['Ubuntu', 'sans-serif'],
-        },
+        fontFamily: ["Ubuntu", "sans-serif"].join(","),
+        // h1: {
+        //     fontFamily: '"Ubuntu", sans-serif',
+        // },
     },
 });
 // font-family: Ubuntu, "times new roman", times, roman, serif;

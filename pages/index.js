@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
   text: {
     // fontSize: '100px',
     // marginRight: '300px',
-    fontFamily: 'Ubuntu, sans-serif',
+    // fontFamily: 'Ubuntu, sans-serif',
     color: 'beige',
     maxWidth: '1200px',
     margin: '0 auto',
