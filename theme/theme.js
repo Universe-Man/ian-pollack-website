@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+// import Ubuntu from './fonts/Ubuntu-Bold.ttf';
 
 const theme = createTheme({
     palette: {
@@ -15,7 +16,7 @@ const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: '"Ubuntu", sans-serif',
+        fontFamily: '"Ubuntu", "sans-serif"',
         h1: {
             fontFamily: '"Ubuntu", sans-serif',
         },

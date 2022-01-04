@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
   text: {
     // fontSize: '100px',
     // marginRight: '300px',
-    // fontFamily: 'Ubuntu, sans-serif',
+    // fontFamily: theme.typography.fontFamily,
     color: 'beige',
     maxWidth: '1200px',
     margin: '0 auto',
@@ -74,7 +74,7 @@ const Index = () => {
           <Grid item xs={12}>
             <Typography variant="h1" className={clsx(classes.text, classes.lrgPadBottom)}>
               hello <span className={classes.green}>friend</span>.
-          </Typography>
+            </Typography>
           </Grid>
           <Grid item xs={11} className={classes.subText}>
             <Typography variant="h3" className={clsx(classes.text, classes.rightAlign)}>
