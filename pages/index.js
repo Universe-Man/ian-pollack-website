@@ -81,7 +81,7 @@ const Index = () => {
               my name is <span className={classes.green}>Ian Pollack</span>.
           </Typography>
             <Typography variant="h3" className={clsx(classes.text)}>
-              i'm formerly a baby,
+              i&apos;m formerly a baby,
           </Typography>
             <Typography variant="h3" className={clsx(classes.text, classes.rightAlign)}>
               and currently a <span className={classes.green}>Software Engineer</span>.
