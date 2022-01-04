@@ -33,10 +33,11 @@ const useStyles = makeStyles(theme => ({
   },
   linkButtons: {
     minWidth: 'fit-content',
-    padding: '5px 15px',
+    padding: '0 10px',
     margin: '0 5px 0',
     display: 'none',
     color: theme.palette.neonGreen,
+    // fontFamily: 'Ubuntu, sans-serif',
     textDecoration: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
@@ -70,10 +71,12 @@ const useStyles = makeStyles(theme => ({
   headerBar: {
     // colors for 'donate' / colors for 'home', 'the big idea', 'stories', and 'nominate' below:
     // backgroundColor: theme.palette.yellow,
-    backgroundColor: '#022052',
+    backgroundColor: theme.palette.darkNavy,
+    backgroundImage: 'linear-gradient(to bottom right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1))',
     boxShadow: 'none',
     // padding: '40px 0 15px 20px',
     height: '100px',
+    // backgroundImage: 'linear-gradient(to bottom right, rgba(43, 47, 69, 0), rgba(43, 47, 69, 1))', // SHOULD I USE THIS? DON'T KNOW IF THIS IS A GOOD LOOK (ALSO USING SOME RED?)
 
   },
   // headerHomePage: {
@@ -91,16 +94,16 @@ const useStyles = makeStyles(theme => ({
   // headerTermsPrivacyLegalPages: {
   //   backgroundColor: theme.palette.orange,
   // },
-  // toolbar: {
-  //   color: theme.palette.black,
-  // },
+  toolbar: {
+    padding: '0 50px',
+  },
   logo: {
     width: '53px',
     height: 'auto',
     textAlign: 'center',
     fontSize: '40px',
-    color: 'seagreen',
-    border: 'solid 3px seagreen',
+    color: theme.palette.neonGreen,
+    border: 'solid 3px',
     borderRadius: '30px',
     // backgroundColor: '#022052',
   },
@@ -108,12 +111,17 @@ const useStyles = makeStyles(theme => ({
     borderLeft: '1px solid',
     borderColor: 'beige',
     width: '1px',
-    height: '50px',
-    margin: '0 25px 0',
+    height: '30px',
+    margin: '0 10px 0',
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'block',
     },
+  },
+  border: {
+    border: 'solid 3px',
+    borderRadius: '10px',
+    padding: '5px 10px',
   },
 }));
 
@@ -252,45 +260,32 @@ export default function MenuAppBar() {
         <Link
           className={classes.linkButtons}
           componenttype="button"
-          href="/the-big-idea"
+          href="#experience"
         >
-          The Big Idea
+          Experience
           </Link>
         <div className={classes.verticalLine} />
 
         <Link
           className={classes.linkButtons}
           componenttype="button"
-          href="/stories"
+          href="#projects"
         >
-          Stories
+          Projects
           </Link>
         <div className={classes.verticalLine} />
         <Link
-          className={clsx(
-            classes.linkButtons,
-            classes.donateLinkButton,
-            router.pathname === '/' && classes.donateLinkOtherPage,
-            router.pathname === '/the-big-idea' && classes.donateLinkOtherPage,
-            // router.pathname === '/stories' && classes.donateLinkButton, // NOTE: not needed because stlyes match donateLinkButton on donate page
-            router.pathname === '/nominate' && classes.donateLinkOtherPage,
-            router.pathname === '/nominate/thank-you' &&
-            classes.donateLinkOtherPage,
-            router.pathname === '/terms' &&
-            classes.donateLinkTermsPrivacyLegalPages,
-            router.pathname === '/privacy' &&
-            classes.donateLinkTermsPrivacyLegalPages,
-            router.pathname === '/legal' &&
-            classes.donateLinkTermsPrivacyLegalPages
-          )}
+          className={classes.linkButtons}
           componenttype="button"
           variant="outlined"
-          href="/donate"
+          href="#contact"
         >
-          Donate
+          Contact
           </Link>
+        <div className={classes.verticalLine} />
+
         <Link
-          className={classes.linkButtons}
+          className={clsx(classes.linkButtons, classes.border)}
           componenttype="button"
           variant="outlined"
           href="/nominate"

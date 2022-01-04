@@ -5,21 +5,55 @@
 import { Grid, Typography, Link } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import theme from '../theme/theme';
+import clsx from 'clsx';
+
 
 
 const useStyles = makeStyles(() => ({
+  masterContainer: {
+    backgroundColor: theme.palette.darkNavy,
+    backgroundImage: 'linear-gradient(to bottom right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1))',
+  },
   container: {
-    padding: '90px 0 60px',
-    backgroundColor: theme.palette.green,
-    backgroundImage: 'url(/images/ian.jpeg)',
+    padding: '90px 60px 60px',
+    // backgroundColor: theme.palette.darkNavy,
+    // backgroundImage: 'url(/images/ian.jpeg)',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    display: 'flex',
+    justifyContent: 'center',
+
   },
   text: {
-    fontSize: '100px',
-    marginRight: '300px',
-  }
+    // fontSize: '100px',
+    // marginRight: '300px',
+    fontFamily: 'Ubuntu, sans-serif',
+    color: 'beige',
+    maxWidth: '1200px',
+    margin: '0 auto',
+  },
+  subText: {
+    maxWidth: '910px',
+  },
+  bodyText: {
+    marginLeft: '0',
+  },
+  rightAlign: {
+    textAlign: 'right',
+  },
+  green: {
+    color: theme.palette.neonGreen,
+  },
+  blueGray: {
+    color: theme.palette.blueGray,
+  },
+  smPadBottom: {
+    paddingBottom: '10px',
+  },
+  lrgPadBottom: {
+    paddingBottom: '50px',
+  },
 }));
 
 
@@ -30,66 +64,81 @@ const Index = () => {
     <>
       <Grid
         container
-        className={classes.container}
+        className={clsx(classes.container, classes.masterContainer)}
         direction="row"
         justify="center"
         alignItems="center"
       >
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
+        <Grid container className={classes.container} xs={12}>
+
+          <Grid item xs={12}>
+            <Typography variant="h1" className={clsx(classes.text, classes.lrgPadBottom)}>
+              hello <span className={classes.green}>friend</span>.
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
+          </Grid>
+          <Grid item xs={11} className={classes.subText}>
+            <Typography variant="h3" className={clsx(classes.text, classes.rightAlign)}>
+              my name is <span className={classes.green}>Ian Pollack</span>.
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
+            <Typography variant="h3" className={clsx(classes.text)}>
+              i'm formerly a baby,
           </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
+            <Typography variant="h3" className={clsx(classes.text, classes.rightAlign)}>
+              and currently a <span className={classes.green}>Software Engineer</span>.
           </Typography>
+
+          </Grid>
         </Grid>
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
-          </Typography>
+        <Grid container className={classes.container} xs={12}>
+          <Grid item xs={12}>
+            <Typography variant="h3" id="profile" className={clsx(classes.text, classes.smPadBottom)}>
+              profile<span className={classes.green}>.</span>
+            </Typography>
+            <Typography variant="h5" id="profile" className={clsx(classes.text, classes.bodyText)}>
+              stuff to read about<span className={classes.green}>.</span>
+            </Typography>
+          </Grid>
+
         </Grid>
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
-          </Typography>
+        <Grid container className={classes.container} xs={12}>
+          <Grid item xs={12}>
+            <Typography variant="h3" id="experience" className={clsx(classes.text, classes.smPadBottom)}>
+              experience<span className={classes.green}>.</span>
+            </Typography>
+            <Typography variant="h5" id="profile" className={clsx(classes.text, classes.bodyText)}>
+              stuff to read about<span className={classes.green}>.</span>
+            </Typography>
+
+          </Grid>
         </Grid>
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
-          </Typography>
+        <Grid container className={classes.container} xs={12}>
+          <Grid item xs={12}>
+            <Typography variant="h3" id="projects" className={clsx(classes.text, classes.smPadBottom)}>
+              projects<span className={classes.green}>.</span>
+            </Typography>
+            <Typography variant="h5" id="profile" className={clsx(classes.text, classes.bodyText)}>
+              stuff to read about<span className={classes.green}>.</span>
+            </Typography>
+
+          </Grid>
         </Grid>
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
-          </Typography>
+        <Grid container className={classes.container} xs={12}>
+          <Grid item xs={12}>
+            <Typography variant="h3" id="contact" className={clsx(classes.text, classes.smPadBottom)}>
+              contact<span className={classes.green}>.</span>
+            </Typography>
+            <Typography variant="h5" id="profile" className={clsx(classes.text, classes.bodyText)}>
+              stuff to read about<span className={classes.green}>.</span>
+            </Typography>
+
+          </Grid>
         </Grid>
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Typography className={classes.text}>
-            hi there
-          </Typography>
-        </Grid>
-        <Grid item>
+
+        {/* <Grid item>
           <Typography id="profile" className={classes.text}>
             profile
           </Typography>
-        </Grid>
+        </Grid> */}
 
       </Grid>
 
