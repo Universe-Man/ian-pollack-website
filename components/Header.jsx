@@ -183,58 +183,60 @@ export default function MenuAppBar() {
           <Grid item xs={6} md={3}>
             <Menu keepMounted {...bindMenu(navMenuState)}>
               <MenuItem
-                data-cy="donate"
+                data-cy="profile"
                 onClick={event =>
                   handleMenuCloseWithLink({
                     event,
-                    link: '/donate',
+                    link: '#profile',
                   })
                 }
               >
-                Donate
+                Profile
                 </MenuItem>
               <MenuItem
-                data-cy="nominate"
+                data-cy="experience"
                 onClick={event =>
                   handleMenuCloseWithLink({
                     event,
-                    link: '/nominate',
+                    link: '#experience',
                   })
                 }
               >
-                Nominate
+                Experience
                 </MenuItem>
               <MenuItem
-                data-cy="the-big-idea"
+                data-cy="projects"
                 onClick={event =>
                   handleMenuCloseWithLink({
                     event,
-                    link: '/the-big-idea',
+                    link: '#projects',
                   })
                 }
               >
-                The Big Idea
+                Projects
                 </MenuItem>
               <MenuItem
+                data-cy="contact"
                 onClick={event =>
                   handleMenuCloseWithLink({
                     event,
-                    link: '/stories',
+                    link: '#contact',
                   })
                 }
               >
-                Stories
+                Contact
                 </MenuItem>
               <MenuItem
+                data-cy="resume"
                 onClick={event =>
                   handleMenuCloseWithLink({
                     event,
-                    link: 'https://cvd.cm/syc',
+                    link: '/documents/IanPollackSoftwareEngineerResume.pdf',
                     target: '_blank',
                   })
                 }
               >
-                Volunteers
+                Resume
                 </MenuItem>
             </Menu>
             <Link href="/" underline="none">
@@ -288,7 +290,8 @@ export default function MenuAppBar() {
           className={clsx(classes.linkButtons, classes.border)}
           componenttype="button"
           variant="outlined"
-          href="/nominate"
+          href="/documents/IanPollackSoftwareEngineerResume.pdf"
+          target="_blank"
         >
           Resume
           </Link>
