@@ -72,7 +72,7 @@ const useStyles = makeStyles(theme => ({
     // colors for 'donate' / colors for 'home', 'the big idea', 'stories', and 'nominate' below:
     // backgroundColor: theme.palette.yellow,
     backgroundColor: theme.palette.darkNavy,
-    backgroundImage: 'linear-gradient(to bottom right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1))',
+    // backgroundImage: 'linear-gradient(to bottom, rgba(34, 38, 35, 0), rgba(34, 38, 35, 1))',
     boxShadow: 'none',
     // padding: '40px 0 15px 20px',
     height: '100px',
@@ -215,7 +215,7 @@ export default function MenuAppBar() {
               >
                 Projects
                 </MenuItem>
-              <MenuItem
+              {/* <MenuItem
                 data-cy="contact"
                 onClick={event =>
                   handleMenuCloseWithLink({
@@ -225,7 +225,7 @@ export default function MenuAppBar() {
                 }
               >
                 Contact
-                </MenuItem>
+                </MenuItem> */}
               <MenuItem
                 data-cy="resume"
                 onClick={event =>
@@ -275,7 +275,7 @@ export default function MenuAppBar() {
         >
           Projects
           </Link>
-        <div className={classes.verticalLine} />
+        {/* <div className={classes.verticalLine} />
         <Link
           className={classes.linkButtons}
           componenttype="button"
@@ -283,7 +283,7 @@ export default function MenuAppBar() {
           href="#contact"
         >
           Contact
-          </Link>
+          </Link> */}
         <div className={classes.verticalLine} />
 
         <Link
