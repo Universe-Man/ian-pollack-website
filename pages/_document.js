@@ -21,6 +21,13 @@ export default class MyDocument extends Document {
                         as="font"
                         crossOrigin=""
                     />
+                    <link
+                        rel="icon"
+                        type="image/png"
+                        sizes="32x32"
+                        href="/images/favicon/icons8-ok-100.png"
+                    />
+
 
                     {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />

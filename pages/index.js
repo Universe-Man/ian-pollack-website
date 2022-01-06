@@ -134,7 +134,7 @@ const Index = () => {
             <div>
               <img
                 className={classes.logo}
-                alt="logo"
+                alt="ians-beautiful-face"
                 src="/images/ian.jpeg"
               />
 
