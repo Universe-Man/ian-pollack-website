@@ -101,6 +101,9 @@ const useStyles = makeStyles(() => ({
       color: theme.palette.chillerGreen,
     }
   },
+  marginCenter: {
+    margin: '0 auto',
+  },
 }));
 
 
@@ -156,20 +159,16 @@ const Index = () => {
                 <div>
                   In my free time, I perform improv and standup comedy, deal craps and blackjack, and play the ukulele. I love baseball, "Survivor", and playing board games with friends.
               </div>
-
               </Typography>
             </div>
-            <div>
+            <div className={classes.marginCenter}>
               <img
                 className={classes.logo}
                 alt="ians-beautiful-face"
                 src="/images/ian.jpeg"
               />
-
             </div>
-
           </Grid>
-
         </Grid>
         <Grid container className={classes.container} xs={12}>
           <Grid item xs={12}>

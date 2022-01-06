@@ -179,12 +179,10 @@ const Footer = ({ className }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {/* ianjpollack@gmail.com */}
                     <img
                       className={classes.socialIcon}
                       alt="social-icon"
                       src="/images/logos/email-logo-white.png"
-                    // style="width: auto;"
                     />
                   </Link>
 
@@ -198,33 +196,49 @@ const Footer = ({ className }) => {
             xs={12}
             className={clsx(classes.legalSection, classes.mobileOnly)}
           >
-            <Typography variant="caption" align="center">
-              {'© '}
-              {thisyear}{' '}
+            <Typography variant="subtitle2" align="center">
+              <span className={classes.moveUp}>
+
+                {'© '}
+                {thisyear}{' '}
+                <span className={classes.verticalLine} />
+              </span>
               <Link
-                color="inherit"
-                href="https://www.h-l.vc/"
+                href="https://github.com/Universe-Man/"
+                underline="none"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Save Your City.
-              </Link>{' '}
-              Rights Reserved
-              {'.'}{' '}
-              <Link
-                color="inherit"
-                href="/terms"
-                className={classes.lawyerLinks}
-              >
-                Terms
+                <img
+                  className={classes.socialIcon}
+                  alt="social-icon"
+                  src="/images/logos/GitHub-Mark-Light-64px.png"
+                />
               </Link>
-              <span className={classes.verticalLine} />
+
               <Link
-                color="inherit"
-                href="/privacy"
-                className={classes.lawyerLinks}
+                href="https://www.linkedin.com/in/ianjpollack/"
+                underline="none"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Privacy
+                <img
+                  className={classes.socialIcon}
+                  alt="social-icon"
+                  src="/images/logos/linkedin-logo-white-1024x1024.png"
+                />
+              </Link>
+              <Link
+                href="mailto:ianjpollack@gmail.com"
+                underline="none"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className={classes.socialIcon}
+                  alt="social-icon"
+                  src="/images/logos/email-logo-white.png"
+                />
               </Link>
             </Typography>
           </Grid>
