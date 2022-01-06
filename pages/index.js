@@ -15,7 +15,13 @@ const useStyles = makeStyles(() => ({
     // backgroundImage: 'linear-gradient(to bottom right, rgba(1, 36, 10, 0), rgba(1, 36, 10, 1))',
   },
   container: {
-    padding: '90px 60px 60px',
+
+    padding: '90px 20px 60px',
+    [theme.breakpoints.up('md')]: {
+      padding: '90px 60px 60px',
+
+    },
+
     // backgroundColor: theme.palette.darkNavy,
     // backgroundImage: 'url(/images/ian.jpeg)',
     backgroundPosition: 'center',
@@ -37,12 +43,20 @@ const useStyles = makeStyles(() => ({
   },
   subText: {
     maxWidth: '910px',
+    textAlign: 'center',
+    [theme.breakpoints.up('md')]: {
+      textAlign: 'unset',
+    },
   },
   bodyText: {
-    marginLeft: '0',
+    // marginLeft: '0',
   },
   rightAlign: {
-    textAlign: 'right',
+    textAlign: 'unset',
+    [theme.breakpoints.up('md')]: {
+      textAlign: 'right',
+    },
+
   },
   green: {
     color: theme.palette.chillerGreen,
@@ -58,11 +72,25 @@ const useStyles = makeStyles(() => ({
   },
   flex: {
     display: 'flex',
+    justifyContent: 'center',
+    flexFlow: 'column-reverse',
+    [theme.breakpoints.up('md')]: {
+      flexFlow: 'row',
+    },
   },
   logo: {
     borderRadius: '250px',
-    margin: '90px 0 0 50px',
     backgroundColor: 'green',
+    margin: '50px 0 50px 0',
+    maxWidth: '100%',
+    [theme.breakpoints.up('md')]: {
+      margin: '90px 0 0 50px',
+      maxWidth: 'none',
+      width: '300px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: 'unset',
+    },
   },
   link: {
     textDecoration: 'none',
