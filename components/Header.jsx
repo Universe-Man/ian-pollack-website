@@ -18,6 +18,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Router, { useRouter } from 'next/router';
 import Link from '@mui/material/Link';
 import clsx from 'clsx';
+// import { keyframes } from '@mui/system';
+
+// const fadeIn = keyframes`
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// `;
 
 const useStyles = makeStyles(theme => ({
   menuButton: {
@@ -31,18 +41,73 @@ const useStyles = makeStyles(theme => ({
       fontSize: '4.5rem',
     },
   },
+  "@keyframes fadeIn": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(-200%)",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
+  },
   linkButtons: {
     minWidth: 'fit-content',
     padding: '0 10px',
     margin: '0 5px 0',
     display: 'none',
+    // opacity: 0,
     color: theme.palette.neonGreen,
+    animationName: '$fadeIn',
+    animationDuration: '1s',
+    animationFillMode: 'backwards',
+    // animationDelay: '1s',
+    // animation: `$fadeIn 4s infinite ease`,
+    // animation: `fade 3000ms ${theme.transitions.easing.easeInOut}`,
     // fontFamily: 'Ubuntu, sans-serif',
     textDecoration: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
     },
   },
+  aniZero: {
+    animationDelay: '0s',
+  },
+  aniFirst: {
+    animationDelay: '.2s',
+  },
+  aniSecond: {
+    animationDelay: '.4s',
+  },
+  aniThird: {
+    animationDelay: '.6s',
+  },
+  aniFourth: {
+    animationDelay: '.8s',
+  },
+  aniFifth: {
+    animationDelay: '1s',
+  },
+  aniSixth: {
+    animationDelay: '1.2s',
+  },
+  aniSeventh: {
+    animationDelay: '1.4s',
+  },
+  // aniEighth: {
+  //   animationDelay: '1.4s',
+  // },
+
+  // "@keyframes fade": {
+  //   "0%": {
+  //     opacity: 0,
+  //     transform: "translateY(-200%)",
+  //   },
+  //   "100%": {
+  //     opacity: 1,
+  //     transform: "translateY(0)",
+  //   },
+  // },
   // donateLinkButton: {
   //   // colors for 'donate' and 'nominate' / colors for 'home', 'the big idea', and 'stories' below as 'other':
   //   color: theme.palette.yellow,
@@ -105,6 +170,9 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.neonGreen,
     border: 'solid 3px',
     borderRadius: '30px',
+    animationName: '$fadeIn',
+    animationDuration: '1s',
+    animationFillMode: 'backwards',
     // backgroundColor: '#022052',
   },
   verticalLine: {
@@ -114,6 +182,9 @@ const useStyles = makeStyles(theme => ({
     height: '30px',
     margin: '0 10px 0',
     display: 'none',
+    animationName: '$fadeIn',
+    animationDuration: '1s',
+    animationFillMode: 'backwards',
     [theme.breakpoints.up('md')]: {
       display: 'block',
     },
@@ -245,31 +316,31 @@ export default function MenuAppBar() {
                 alt="logo"
                 src="/images/ian.jpeg"
               /> */}
-              <h2 className={classes.logo}>I</h2>
+              <h2 className={clsx(classes.logo, classes.aniZero)}>I</h2>
             </Link>
           </Grid>
         </Grid>
         {/* Desktop Buttons Below */}
         <Link
-          className={classes.linkButtons}
+          className={clsx(classes.linkButtons, classes.first)}
           componenttype="button"
           href="#profile"
         >
           Profile
           </Link>
-        <div className={classes.verticalLine} />
+        <div className={clsx(classes.verticalLine, classes.aniFifth)} />
 
         <Link
-          className={classes.linkButtons}
+          className={clsx(classes.linkButtons, classes.aniSecond)}
           componenttype="button"
           href="#experience"
         >
           Experience
           </Link>
-        <div className={classes.verticalLine} />
+        <div className={clsx(classes.verticalLine, classes.aniSixth)} />
 
         <Link
-          className={classes.linkButtons}
+          className={clsx(classes.linkButtons, classes.aniThird)}
           componenttype="button"
           href="#projects"
         >
@@ -284,10 +355,10 @@ export default function MenuAppBar() {
         >
           Contact
           </Link> */}
-        <div className={classes.verticalLine} />
+        <div className={clsx(classes.verticalLine, classes.aniSeventh)} />
 
         <Link
-          className={clsx(classes.linkButtons, classes.border)}
+          className={clsx(classes.linkButtons, classes.aniFourth, classes.border)}
           componenttype="button"
           variant="outlined"
           href="/documents/IanPollackSoftwareEngineerResume.pdf"
