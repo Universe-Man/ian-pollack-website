@@ -11,19 +11,16 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles(() => ({
   masterContainer: {
-    backgroundColor: theme.palette.darkNavy,
-    // backgroundImage: 'linear-gradient(to bottom right, rgba(1, 36, 10, 0), rgba(1, 36, 10, 1))',
+    // backgroundColor: theme.palette.darkNavy,
+    backgroundImage: 'linear-gradient(to bottom right, rgba(2, 32, 82, 0.8), rgba(2, 32, 82, 0.2)), url("/images/markus-spiske-hvSr_CVecVI-unsplash.jpg")',
+    // backgroundImage: 'url("./images/markus-spiske-hvSr_CVecVI-unsplash.jpg")',
   },
   container: {
-
     padding: '90px 20px 60px',
     [theme.breakpoints.up('md')]: {
       padding: '90px 60px 60px',
 
     },
-
-    // backgroundColor: theme.palette.darkNavy,
-    // backgroundImage: 'url(/images/ian.jpeg)',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -31,15 +28,24 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'center',
 
   },
+  "@keyframes fadeUp": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(200%)",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
+  },
   text: {
-    // fontSize: '100px',
-    // marginRight: '300px',
-    // fontFamily: theme.typography.fontFamily,
-    // fontFamily: 'Ubuntu',
-    // fontWeight: '700',
     color: 'beige',
     maxWidth: '1200px',
     margin: '0 auto',
+    animationName: '$fadeUp',
+    animationDuration: '1s',
+    animationFillMode: 'backwards',
+
   },
   subText: {
     maxWidth: '910px',
@@ -104,6 +110,22 @@ const useStyles = makeStyles(() => ({
   marginCenter: {
     margin: '0 auto',
   },
+  // header animations end at 1.4s delay
+  aniZero: {
+    animationDelay: '1.6s',
+  },
+  aniFirst: {
+    animationDelay: '1.8s',
+  },
+  aniSecond: {
+    animationDelay: '2s',
+  },
+  aniThird: {
+    animationDelay: '2.2s',
+  },
+  aniRest: {
+    animationDelay: '2.4s',
+  },
 }));
 
 
@@ -122,18 +144,18 @@ const Index = () => {
         <Grid container className={classes.container} xs={12}>
 
           <Grid item xs={12}>
-            <Typography variant="h1" className={clsx(classes.text, classes.lrgPadBottom)}>
+            <Typography variant="h1" className={clsx(classes.text, classes.lrgPadBottom, classes.aniZero)}>
               hello <span className={classes.green}>friend</span>.
             </Typography>
           </Grid>
           <Grid item xs={11} className={classes.subText}>
-            <Typography variant="h3" className={clsx(classes.text, classes.rightAlign)}>
+            <Typography variant="h3" className={clsx(classes.text, classes.rightAlign, classes.aniFirst)}>
               my name is <span className={classes.green}>Ian Pollack</span>.
           </Typography>
-            <Typography variant="h3" className={clsx(classes.text)}>
+            <Typography variant="h3" className={clsx(classes.text, classes.aniSecond)}>
               i&apos;m formerly a baby,
           </Typography>
-            <Typography variant="h3" className={clsx(classes.text, classes.rightAlign)}>
+            <Typography variant="h3" className={clsx(classes.text, classes.rightAlign, classes.aniThird)}>
               and currently a <span className={classes.green}>Software Engineer</span>.
           </Typography>
 
@@ -142,11 +164,11 @@ const Index = () => {
         <Grid container className={classes.container} xs={12}>
           <Grid item xs={12} className={classes.flex}>
             <div>
-              <Typography variant="h3" id="profile" className={clsx(classes.text, classes.smPadBottom)}>
+              <Typography variant="h3" id="profile" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
                 profile<span className={classes.green}>.</span>
               </Typography>
 
-              <Typography variant="h5" className={clsx(classes.text, classes.bodyText)}>
+              <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
                 <br />
                 <div>
                   Hey there! I'm a Software Engineer with a passion to be part of a team that builds great products, and a love for creative thinking and solving real-life problems through code. I want to help build a cohesive and efficient team working towards growing an organization I am proud to be a part of.
@@ -161,7 +183,7 @@ const Index = () => {
               </div>
               </Typography>
             </div>
-            <div className={classes.marginCenter}>
+            <div className={clsx(classes.marginCenter, classes.aniRest)}>
               <img
                 className={classes.logo}
                 alt="ians-beautiful-face"
@@ -172,16 +194,16 @@ const Index = () => {
         </Grid>
         <Grid container className={classes.container} xs={12}>
           <Grid item xs={12}>
-            <Typography variant="h3" id="experience" className={clsx(classes.text, classes.smPadBottom)}>
+            <Typography variant="h3" id="experience" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
               experience<span className={classes.green}>.</span>
             </Typography>
             <br />
-            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green)}>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
               <Link href="https://lightmatter.com/" target="_blank" className={clsx(classes.link, classes.green)}>
                 Lightmatter
               </Link>
             </Typography>
-            <Typography variant="h5" className={clsx(classes.text, classes.bodyText)}>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
               {/* <br /> */}
               <ul>
                 <li className={classes.listItem}>Built "Save Your City" website using Next.js/React, and Django/Wagtail; the site collects donations to support NYC businesses negatively affected by COVID-19.</li>
@@ -203,16 +225,16 @@ const Index = () => {
         </Grid>
         <Grid container className={classes.container} xs={12}>
           <Grid item xs={12}>
-            <Typography variant="h3" id="projects" className={clsx(classes.text, classes.smPadBottom)}>
+            <Typography variant="h3" id="projects" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
               projects<span className={classes.green}>.</span>
             </Typography>
             <br />
-            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.smPadBottom)}>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.smPadBottom, classes.aniRest)}>
               <Link href="https://www.saveyourcity.nyc/" target="_blank" className={clsx(classes.link, classes.green)}>
                 Save Your City
               </Link>
             </Typography>
-            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.list)}>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.list, classes.aniRest)}>
               <div className={classes.smPadBottom}>
                 Save Your City is a non-profit website build to help NYC businesses struggling from the fallout of the COVID-19 pandemic.
               </div>

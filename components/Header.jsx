@@ -31,69 +31,63 @@ const useStyles = makeStyles(theme => ({
       fontSize: '4.5rem',
     },
   },
+  "@keyframes fadeDown": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(-200%)",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
+  },
   linkButtons: {
     minWidth: 'fit-content',
     padding: '0 10px',
     margin: '0 5px 0',
     display: 'none',
     color: theme.palette.neonGreen,
-    // fontFamily: 'Ubuntu, sans-serif',
+    animationName: '$fadeDown',
+    animationDuration: '1s',
+    animationFillMode: 'backwards',
     textDecoration: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
     },
   },
-  // donateLinkButton: {
-  //   // colors for 'donate' and 'nominate' / colors for 'home', 'the big idea', and 'stories' below as 'other':
-  //   color: theme.palette.yellow,
-  //   backgroundColor: theme.palette.black,
-  //   '&:hover': {
-  //     color: theme.palette.black,
-  //     transition: '0.3s linear',
-  //   },
-  // },
-  // donateLinkOtherPage: {
-  //   color: theme.palette.black,
-  //   backgroundColor: theme.palette.yellow,
-  //   '&:hover': {
-  //     color: theme.palette.black,
-  //     transition: '0.3s linear',
-  //   },
-  // },
-  // donateLinkTermsPrivacyLegalPages: {
-  //   color: theme.palette.orange,
-  //   backgroundColor: theme.palette.black,
-  //   '&:hover': {
-  //     color: theme.palette.black,
-  //     transition: '0.3s linear',
-  //   },
-  // },
+  aniZero: {
+    animationDelay: '0s',
+  },
+  aniFirst: {
+    animationDelay: '.2s',
+  },
+  aniSecond: {
+    animationDelay: '.4s',
+  },
+  aniThird: {
+    animationDelay: '.6s',
+  },
+  aniFourth: {
+    animationDelay: '.8s',
+  },
+  aniFifth: {
+    animationDelay: '1s',
+  },
+  aniSixth: {
+    animationDelay: '1.2s',
+  },
+  aniSeventh: {
+    animationDelay: '1.4s',
+  },
   headerBar: {
     // colors for 'donate' / colors for 'home', 'the big idea', 'stories', and 'nominate' below:
     // backgroundColor: theme.palette.yellow,
     backgroundColor: theme.palette.darkNavy,
-    // backgroundImage: 'linear-gradient(to bottom, rgba(34, 38, 35, 0), rgba(34, 38, 35, 1))',
+    backgroundImage: 'linear-gradient(to top, rgba(114, 122, 166, 0), rgba(114, 122, 166, .4))', // theme.palette.blueGray
     boxShadow: 'none',
     // padding: '40px 0 15px 20px',
     height: '100px',
-    // backgroundImage: 'linear-gradient(to bottom right, rgba(43, 47, 69, 0), rgba(43, 47, 69, 1))', // SHOULD I USE THIS? DON'T KNOW IF THIS IS A GOOD LOOK (ALSO USING SOME RED?)
-
   },
-  // headerHomePage: {
-  //   backgroundColor: theme.palette.green,
-  // },
-  // headerBigIdeaPage: {
-  //   backgroundColor: theme.palette.blue,
-  // },
-  // headerStoriesPage: {
-  //   backgroundColor: theme.palette.yellow,
-  // },
-  // headerNominatePage: {
-  //   backgroundColor: theme.palette.blue,
-  // },
-  // headerTermsPrivacyLegalPages: {
-  //   backgroundColor: theme.palette.orange,
-  // },
   toolbar: {
     padding: '0 50px',
   },
@@ -105,6 +99,9 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.neonGreen,
     border: 'solid 3px',
     borderRadius: '30px',
+    animationName: '$fadeDown',
+    animationDuration: '1s',
+    animationFillMode: 'backwards',
     // backgroundColor: '#022052',
   },
   verticalLine: {
@@ -114,6 +111,9 @@ const useStyles = makeStyles(theme => ({
     height: '30px',
     margin: '0 10px 0',
     display: 'none',
+    animationName: '$fadeDown',
+    animationDuration: '1s',
+    animationFillMode: 'backwards',
     [theme.breakpoints.up('md')]: {
       display: 'block',
     },
@@ -245,31 +245,31 @@ export default function MenuAppBar() {
                 alt="logo"
                 src="/images/ian.jpeg"
               /> */}
-              <h2 className={classes.logo}>I</h2>
+              <h2 className={clsx(classes.logo, classes.aniZero)}>I</h2>
             </Link>
           </Grid>
         </Grid>
         {/* Desktop Buttons Below */}
         <Link
-          className={classes.linkButtons}
+          className={clsx(classes.linkButtons, classes.first)}
           componenttype="button"
           href="#profile"
         >
           Profile
           </Link>
-        <div className={classes.verticalLine} />
+        <div className={clsx(classes.verticalLine, classes.aniFifth)} />
 
         <Link
-          className={classes.linkButtons}
+          className={clsx(classes.linkButtons, classes.aniSecond)}
           componenttype="button"
           href="#experience"
         >
           Experience
           </Link>
-        <div className={classes.verticalLine} />
+        <div className={clsx(classes.verticalLine, classes.aniSixth)} />
 
         <Link
-          className={classes.linkButtons}
+          className={clsx(classes.linkButtons, classes.aniThird)}
           componenttype="button"
           href="#projects"
         >
@@ -284,10 +284,10 @@ export default function MenuAppBar() {
         >
           Contact
           </Link> */}
-        <div className={classes.verticalLine} />
+        <div className={clsx(classes.verticalLine, classes.aniSeventh)} />
 
         <Link
-          className={clsx(classes.linkButtons, classes.border)}
+          className={clsx(classes.linkButtons, classes.aniFourth, classes.border)}
           componenttype="button"
           variant="outlined"
           href="/documents/IanPollackSoftwareEngineerResume.pdf"
