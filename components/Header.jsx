@@ -20,7 +20,7 @@ import Link from '@mui/material/Link';
 import clsx from 'clsx';
 // import { keyframes } from '@mui/system';
 
-// const fadeIn = keyframes`
+// const fadeDown = keyframes`
 //   from {
 //     opacity: 0;
 //   }
@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: '4.5rem',
     },
   },
-  "@keyframes fadeIn": {
+  "@keyframes fadeDown": {
     "0%": {
       opacity: 0,
       transform: "translateY(-200%)",
@@ -58,11 +58,11 @@ const useStyles = makeStyles(theme => ({
     display: 'none',
     // opacity: 0,
     color: theme.palette.neonGreen,
-    animationName: '$fadeIn',
+    animationName: '$fadeDown',
     animationDuration: '1s',
     animationFillMode: 'backwards',
     // animationDelay: '1s',
-    // animation: `$fadeIn 4s infinite ease`,
+    // animation: `$fadeDown 4s infinite ease`,
     // animation: `fade 3000ms ${theme.transitions.easing.easeInOut}`,
     // fontFamily: 'Ubuntu, sans-serif',
     textDecoration: 'none',
@@ -137,7 +137,7 @@ const useStyles = makeStyles(theme => ({
     // colors for 'donate' / colors for 'home', 'the big idea', 'stories', and 'nominate' below:
     // backgroundColor: theme.palette.yellow,
     backgroundColor: theme.palette.darkNavy,
-    // backgroundImage: 'linear-gradient(to bottom, rgba(34, 38, 35, 0), rgba(34, 38, 35, 1))',
+    backgroundImage: 'linear-gradient(to top, rgba(114, 122, 166, 0), rgba(114, 122, 166, .4))', // theme.palette.blueGray
     boxShadow: 'none',
     // padding: '40px 0 15px 20px',
     height: '100px',
@@ -170,7 +170,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.neonGreen,
     border: 'solid 3px',
     borderRadius: '30px',
-    animationName: '$fadeIn',
+    animationName: '$fadeDown',
     animationDuration: '1s',
     animationFillMode: 'backwards',
     // backgroundColor: '#022052',
@@ -182,7 +182,7 @@ const useStyles = makeStyles(theme => ({
     height: '30px',
     margin: '0 10px 0',
     display: 'none',
-    animationName: '$fadeIn',
+    animationName: '$fadeDown',
     animationDuration: '1s',
     animationFillMode: 'backwards',
     [theme.breakpoints.up('md')]: {

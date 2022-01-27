@@ -14,10 +14,11 @@ const useStyles = makeStyles(theme => ({
     color: 'beige',
     // backgroundImage: 'url(/images/footer/Screen_1920_black.jpg)',
     backgroundColor: theme.palette.darkNavy,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    textAlign: 'center',
+    // backgroundPosition: 'center',
+    // backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
+    // textAlign: 'center',
+    backgroundImage: 'linear-gradient(to bottom, rgba(114, 122, 166, 0), rgba(114, 122, 166, .4))', // theme.palette.blueGray
     justifyContent: 'center',
     padding: '40px 0 20px',
     [theme.breakpoints.up('md')]: {
@@ -26,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   innerContainer: {
-    marginBottom: '25px',
+    margin: '20px 0',
     display: 'flex',
     flexFlow: 'column',
     justifyContent: 'center',
@@ -123,7 +124,7 @@ const Footer = ({ className }) => {
   const classes = useStyles();
   return (
     <>
-      <Grid container className={clsx(classes.container, className)}>
+      <Grid container className={clsx(classes.container)}>
         <Grid
           container
           item
