@@ -5,19 +5,12 @@ import { useRouter } from 'next/router';
 import { makeStyles } from '@mui/styles';
 import clsx from 'clsx';
 
-// import Link from 'components/router/Link';
-
 const thisyear = new Date().getFullYear();
 
 const useStyles = makeStyles(theme => ({
   container: {
     color: 'beige',
-    // backgroundImage: 'url(/images/footer/Screen_1920_black.jpg)',
     backgroundColor: theme.palette.darkNavy,
-    // backgroundPosition: 'center',
-    // backgroundSize: 'cover',
-    // backgroundRepeat: 'no-repeat',
-    // textAlign: 'center',
     backgroundImage: 'linear-gradient(to bottom, rgba(114, 122, 166, 0), rgba(114, 122, 166, .4))', // theme.palette.blueGray
     justifyContent: 'center',
     padding: '40px 0 20px',

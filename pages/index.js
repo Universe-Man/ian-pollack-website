@@ -12,7 +12,7 @@ import clsx from 'clsx';
 const useStyles = makeStyles(() => ({
   masterContainer: {
     // backgroundColor: theme.palette.darkNavy,
-    backgroundImage: 'linear-gradient(to bottom right, rgba(2, 32, 82, 0.8), rgba(2, 32, 82, 0.2)), url("./images/markus-spiske-hvSr_CVecVI-unsplash.jpg")',
+    backgroundImage: 'linear-gradient(to bottom right, rgba(2, 32, 82, 0.8), rgba(2, 32, 82, 0.2)), url("/images/markus-spiske-hvSr_CVecVI-unsplash.jpg")',
     // backgroundImage: 'url("./images/markus-spiske-hvSr_CVecVI-unsplash.jpg")',
   },
   container: {
@@ -21,9 +21,6 @@ const useStyles = makeStyles(() => ({
       padding: '90px 60px 60px',
 
     },
-
-    // backgroundColor: theme.palette.darkNavy,
-    // backgroundImage: 'url(/images/ian.jpeg)',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -42,11 +39,6 @@ const useStyles = makeStyles(() => ({
     },
   },
   text: {
-    // fontSize: '100px',
-    // marginRight: '300px',
-    // fontFamily: theme.typography.fontFamily,
-    // fontFamily: 'Ubuntu',
-    // fontWeight: '700',
     color: 'beige',
     maxWidth: '1200px',
     margin: '0 auto',
@@ -134,15 +126,6 @@ const useStyles = makeStyles(() => ({
   aniRest: {
     animationDelay: '2.4s',
   },
-  // aniFifth: {
-  //   animationDelay: '1s',
-  // },
-  // aniSixth: {
-  //   animationDelay: '1.2s',
-  // },
-  // aniSeventh: {
-  //   animationDelay: '1.4s',
-  // },
 }));
 
 

@@ -18,16 +18,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Router, { useRouter } from 'next/router';
 import Link from '@mui/material/Link';
 import clsx from 'clsx';
-// import { keyframes } from '@mui/system';
-
-// const fadeDown = keyframes`
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// `;
 
 const useStyles = makeStyles(theme => ({
   menuButton: {
@@ -56,15 +46,10 @@ const useStyles = makeStyles(theme => ({
     padding: '0 10px',
     margin: '0 5px 0',
     display: 'none',
-    // opacity: 0,
     color: theme.palette.neonGreen,
     animationName: '$fadeDown',
     animationDuration: '1s',
     animationFillMode: 'backwards',
-    // animationDelay: '1s',
-    // animation: `$fadeDown 4s infinite ease`,
-    // animation: `fade 3000ms ${theme.transitions.easing.easeInOut}`,
-    // fontFamily: 'Ubuntu, sans-serif',
     textDecoration: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
@@ -94,45 +79,6 @@ const useStyles = makeStyles(theme => ({
   aniSeventh: {
     animationDelay: '1.4s',
   },
-  // aniEighth: {
-  //   animationDelay: '1.4s',
-  // },
-
-  // "@keyframes fade": {
-  //   "0%": {
-  //     opacity: 0,
-  //     transform: "translateY(-200%)",
-  //   },
-  //   "100%": {
-  //     opacity: 1,
-  //     transform: "translateY(0)",
-  //   },
-  // },
-  // donateLinkButton: {
-  //   // colors for 'donate' and 'nominate' / colors for 'home', 'the big idea', and 'stories' below as 'other':
-  //   color: theme.palette.yellow,
-  //   backgroundColor: theme.palette.black,
-  //   '&:hover': {
-  //     color: theme.palette.black,
-  //     transition: '0.3s linear',
-  //   },
-  // },
-  // donateLinkOtherPage: {
-  //   color: theme.palette.black,
-  //   backgroundColor: theme.palette.yellow,
-  //   '&:hover': {
-  //     color: theme.palette.black,
-  //     transition: '0.3s linear',
-  //   },
-  // },
-  // donateLinkTermsPrivacyLegalPages: {
-  //   color: theme.palette.orange,
-  //   backgroundColor: theme.palette.black,
-  //   '&:hover': {
-  //     color: theme.palette.black,
-  //     transition: '0.3s linear',
-  //   },
-  // },
   headerBar: {
     // colors for 'donate' / colors for 'home', 'the big idea', 'stories', and 'nominate' below:
     // backgroundColor: theme.palette.yellow,
@@ -141,24 +87,7 @@ const useStyles = makeStyles(theme => ({
     boxShadow: 'none',
     // padding: '40px 0 15px 20px',
     height: '100px',
-    // backgroundImage: 'linear-gradient(to bottom right, rgba(43, 47, 69, 0), rgba(43, 47, 69, 1))', // SHOULD I USE THIS? DON'T KNOW IF THIS IS A GOOD LOOK (ALSO USING SOME RED?)
-
   },
-  // headerHomePage: {
-  //   backgroundColor: theme.palette.green,
-  // },
-  // headerBigIdeaPage: {
-  //   backgroundColor: theme.palette.blue,
-  // },
-  // headerStoriesPage: {
-  //   backgroundColor: theme.palette.yellow,
-  // },
-  // headerNominatePage: {
-  //   backgroundColor: theme.palette.blue,
-  // },
-  // headerTermsPrivacyLegalPages: {
-  //   backgroundColor: theme.palette.orange,
-  // },
   toolbar: {
     padding: '0 50px',
   },
