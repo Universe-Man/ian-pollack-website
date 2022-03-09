@@ -158,7 +158,6 @@ const Index = () => {
             <Typography variant="h3" className={clsx(classes.text, classes.rightAlign, classes.aniThird)}>
               and currently a <span className={classes.green}>Software Engineer</span>.
           </Typography>
-
           </Grid>
         </Grid>
         <Grid container className={classes.container} xs={12}>
@@ -220,7 +219,6 @@ const Index = () => {
                 <li className={classes.listItem}>Supported blocked developers by getting assets, media, or decisions from the client.</li>
               </ul>
             </Typography>
-
           </Grid>
         </Grid>
         <Grid container className={classes.container} xs={12}>
@@ -244,6 +242,17 @@ const Index = () => {
               </div>
               <div className={classes.smPadBottom}>
                 The site also recorded all nomination and donation submissions into its own database for reference during donation payouts and future marketing.
+              </div>
+            </Typography>
+            <br />
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.smPadBottom, classes.aniRest)}>
+              <Link href="https://forgetfulnotes.onrender.com/" target="_blank" className={clsx(classes.link, classes.green)}>
+                Forgetful Notes
+              </Link>
+            </Typography>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.list, classes.aniRest)}>
+              <div className={classes.smPadBottom}>
+                Forgetful Notes is a useless notes app that will gradually forget your notes as you continue to add them. This app was build with Next.js and React, and as you use it, just remember it's doing its best.
               </div>
             </Typography>
           </Grid>
