@@ -8,7 +8,34 @@ export default class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
+                    <link href="/fonts.css" rel="stylesheet" />
+                    <link
+                        rel="preload"
+                        href="/fonts/Ubuntu-Regular.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/fonts/Ubuntu-Bold.ttf"
+                        as="font"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="icon"
+                        type="image/png"
+                        sizes="32x32"
+                        href="/images/favicon/icons8-ok-100.png"
+                    />
+
+
+                    {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+                    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet" /> */}
+
                     {/* Not exactly required, but this is the PWA primary color */}
+
+
                     <meta name="theme-color" content={theme.palette.primary.main} />
                 </Head>
                 <body>

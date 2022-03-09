@@ -1,8 +1,10 @@
 import { createTheme } from '@mui/material/styles';
+// import Ubuntu from './fonts/Ubuntu-Bold.ttf';
 
 const theme = createTheme({
     palette: {
         neonGreen: '#00eb5e',
+        chillerGreen: '#04c433',
         darkNavy: '#022052',
         blueGray: '#727aa6',
         orange: '#FF4701',
@@ -14,12 +16,17 @@ const theme = createTheme({
             main: '#000000',
         },
     },
-    typography: {
-        fontFamily: 'Ubuntu, sans-serif',
-        h1: {
-            fontFamily: ['Ubuntu', 'sans-serif'],
+    components: {
+        MuiTypography: {
+            defaultProps: {
+                fontFamily: 'Ubuntu, sans-serif',
+                fontWeight: '700',
+                // h1: {
+                //     fontFamily: '"Ubuntu", sans-serif',
+                // },
+            }
         },
-    },
+    }
 });
 // font-family: Ubuntu, "times new roman", times, roman, serif;
 export default theme;
