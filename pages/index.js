@@ -170,16 +170,20 @@ const Index = () => {
               <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
                 <br />
                 <div>
-                  Hey there! I'm a Software Engineer with a passion to be part of a team that builds great products, and a love for creative thinking and solving real-life problems through code. I want to help build a cohesive and efficient team working towards growing an organization I am proud to be a part of.
-              </div>
+                  Hey there! My name's Ian and I'm a Senior Software Engineer with a passion to be part of a team that builds great products, and a love for creative thinking and solving real-life problems through code. I want to help build a cohesive and efficient team working towards growing an organization I am proud to be a part of.
+                </div>
                 <br />
                 <div>
-                  I have experience wearing multiple hats, driving a project forward and facilitating its progress to launch as both an Engineer and a Project Manager, and I'm eager to continue to learn and grow.
-              </div>
+                  I have experience wearing multiple hats, driving a project forward and facilitating its progress to launch as both an Engineer and a Project Manager, have clear and effective communication skills, conveying project progress concisely to Leadership and clients, and I'm eager to continue to learn and grow.
+                </div>
                 <br />
                 <div>
                   In my free time, I perform improv and standup comedy, deal craps and blackjack, and play the ukulele. I love baseball, "Survivor", and playing board games with friends.
-              </div>
+                </div>
+                <div>
+                  Here's a list of the languages/libraries I've worked with:
+                  Angular, APIs, AWS, CSS, Django, Docker, Foundation, Git, GoLang, HTML, JavaScript, Jest, JSON, jQuery, Linux, Material-UI, MySQL, Next, Node, Postgres, Prawn, Python, Rails, React, Redis, Redux, Regex, RSpec, RSwag, Ruby, Sass, Semantic, Sidekiq, SimpleCov, SQL, TypeScript, VirtualBox, Vue, Wagtail, and Wordpress
+                </div>
               </Typography>
             </div>
             <div className={clsx(classes.marginCenter, classes.aniRest)}>
@@ -197,6 +201,24 @@ const Index = () => {
               experience<span className={classes.green}>.</span>
             </Typography>
             <br />
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
+              <Link href="https://www.hp.com/" target="_blank" className={clsx(classes.link, classes.green)}>
+                HP
+              </Link>
+            </Typography>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
+              {/* <br /> */}
+              <ul>
+                <li className={classes.listItem}>Maintained and managed HP’s Cloud Bank payment processing system and invoice/PDF creation and archiving for their Instant Ink service and other HP services.</li>
+                <li className={classes.listItem}>Programmed in Ruby on Rails to build new feature requests and bug fixes, including new API endpoints and their Swagger docs, payload responses, data privacy and encryption, and application deployment.</li>
+                <li className={classes.listItem}>Operated as a Technical Lead to field questions and offer code feedback on PR reviews, and coordinated future sprint planning.</li>
+                <li className={classes.listItem}>Established clear communication between teams to ensure tasks are clearly understood and remain unblocked.</li>
+                <li className={classes.listItem}>Collaborated with Development team to unblock various issues and ensure work is completed by sprint deadlines.</li>
+                <li className={classes.listItem}>Designed future service workflows for Project Architect.</li>
+                <li className={classes.listItem}>Entrusted to interview future candidates for team growth and development.</li>
+                <li className={classes.listItem}>Work with QA team to ensure bugs are found and fixed, and put out “fires”.</li>
+              </ul>
+            </Typography>
             <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
               <Link href="https://lightmatter.com/" target="_blank" className={clsx(classes.link, classes.green)}>
                 Lightmatter
