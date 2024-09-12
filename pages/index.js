@@ -170,7 +170,7 @@ const Index = () => {
               <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
                 <br />
                 <div>
-                  Hey there! My name's Ian and I'm a Senior Software Engineer with a passion to be part of a team that builds great products, and a love for creative thinking and solving real-life problems through code. I want to help build a cohesive and efficient team working towards growing an organization I am proud to be a part of.
+                  Hey there! My name's Ian and I'm a Software Engineer with a passion to be part of a team that builds great products, and a love for creative thinking and solving real-life problems through code. I want to help build a cohesive and efficient team working towards growing an organization I am proud to be a part of.
                 </div>
                 <br />
                 <div>
@@ -182,7 +182,7 @@ const Index = () => {
                 </div>
                 <div>
                   Here's a list of the languages/libraries I've worked with:
-                  Angular, APIs, AWS, CSS, Django, Docker, Foundation, Git, GoLang, HTML, JavaScript, Jest, JSON, jQuery, Linux, Material-UI, MySQL, Next, Node, Postgres, Prawn, Python, Rails, React, Redis, Redux, Regex, RSpec, RSwag, Ruby, Sass, Semantic, Sidekiq, SimpleCov, SQL, TypeScript, VirtualBox, Vue, Wagtail, and Wordpress
+                  Angular, AWS, CSS, Django, Git, GoLang, HTML, JavaScript, Jest, jQuery, Material-UI, MySQL, Next, Postgres, Prawn, Python, Rails, React, Redis, Redux, RSpec, Ruby, Sass, Semantic, SQL, TypeScript, Vue, and Wordpress
                 </div>
               </Typography>
             </div>
