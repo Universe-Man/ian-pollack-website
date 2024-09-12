@@ -87,6 +87,8 @@ const useStyles = makeStyles(theme => ({
     boxShadow: 'none',
     // padding: '40px 0 15px 20px',
     height: '100px',
+    fontFamily: 'Ubuntu, sans-serif',
+    fontWeight: '700'
   },
   toolbar: {
     padding: '0 50px',

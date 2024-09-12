@@ -45,7 +45,8 @@ const useStyles = makeStyles(() => ({
     animationName: '$fadeUp',
     animationDuration: '1s',
     animationFillMode: 'backwards',
-
+    fontFamily: 'Ubuntu, sans-serif',
+    fontWeight: '700'
   },
   subText: {
     maxWidth: '910px',
