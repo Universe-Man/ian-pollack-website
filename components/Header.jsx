@@ -233,7 +233,7 @@ export default function MenuAppBar() {
                 onClick={event =>
                   handleMenuCloseWithLink({
                     event,
-                    link: '/documents/IanPollackSoftwareEngineerResume2024.pdf',
+                    link: '/documents/IanPollackSoftwareEngineerResume-3-Fall2024.pdf',
                     target: '_blank',
                   })
                 }
