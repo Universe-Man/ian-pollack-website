@@ -142,7 +142,7 @@ const Index = () => {
         justify="center"
         alignItems="center"
       >
-        <Grid container className={classes.container} xs={12}>
+        <Grid container item className={classes.container} xs={12}>
 
           <Grid item xs={12}>
             <Typography variant="h1" className={clsx(classes.text, classes.lrgPadBottom, classes.aniZero)}>
@@ -161,7 +161,7 @@ const Index = () => {
           </Typography>
           </Grid>
         </Grid>
-        <Grid container className={classes.container} xs={12}>
+        <Grid container item className={classes.container} xs={12}>
           <Grid item xs={12} className={classes.flex}>
             <div>
               <Typography variant="h3" id="profile" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
@@ -196,7 +196,7 @@ const Index = () => {
             </div>
           </Grid>
         </Grid>
-        <Grid container className={classes.container} xs={12}>
+        <Grid container item className={classes.container} xs={12}>
           <Grid item xs={12}>
             <Typography variant="h3" id="experience" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
               experience<span className={classes.green}>.</span>
@@ -244,7 +244,7 @@ const Index = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container className={classes.container} xs={12}>
+        <Grid container item className={classes.container} xs={12}>
           <Grid item xs={12}>
             <Typography variant="h3" id="projects" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
               projects<span className={classes.green}>.</span>

@@ -181,7 +181,7 @@ export default function MenuAppBar() {
       )}
     >
       <Toolbar className={classes.toolbar}>
-        <Grid container justify="space-between" alignItems="center">
+        <Grid container item justify="space-between" alignItems="center">
           <Grid item xs={6} md={3}>
             <Menu keepMounted {...bindMenu(navMenuState)}>
               <MenuItem
