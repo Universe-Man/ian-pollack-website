@@ -1,3 +1,9 @@
+Welcome to Ian Pollack's Personal Website!
+
+To run locally, run "npm run dev" in your terminal.
+
+You can find the project running at http://localhost:3000 in the browser of your choice.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
