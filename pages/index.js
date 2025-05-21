@@ -2,7 +2,7 @@
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
 // import { Grid, Typography, Link } from '@material-ui/core';
-import { Grid, Typography, Link } from '@mui/material';
+import { Grid, Typography, Link, ListItem, ListItemText } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import theme from '../theme/theme';
 import clsx from 'clsx';
@@ -38,9 +38,19 @@ const useStyles = makeStyles(() => ({
       transform: "translateY(0)",
     },
   },
-  text: {
+  profileText: {
     color: 'beige',
     maxWidth: '1200px',
+    margin: '0 auto',
+    animationName: '$fadeUp',
+    animationDuration: '1s',
+    animationFillMode: 'backwards',
+    fontFamily: 'Ubuntu, sans-serif',
+    fontWeight: '700'
+  },
+  text: {
+    color: 'beige',
+    width: '85%',
     margin: '0 auto',
     animationName: '$fadeUp',
     animationDuration: '1s',
@@ -127,6 +137,9 @@ const useStyles = makeStyles(() => ({
   aniRest: {
     animationDelay: '2.4s',
   },
+  widthShyFull: {
+    width: '85%',
+  },
 }));
 
 
@@ -143,20 +156,19 @@ const Index = () => {
         alignItems="center"
       >
         <Grid container item className={classes.container} xs={12}>
-
           <Grid item xs={12}>
-            <Typography variant="h1" className={clsx(classes.text, classes.lrgPadBottom, classes.aniZero)}>
+            <Typography variant="h1" className={clsx(classes.profileText, classes.lrgPadBottom, classes.aniZero)}>
               hello <span className={classes.green}>friend</span>.
             </Typography>
           </Grid>
           <Grid item xs={11} className={classes.subText}>
-            <Typography variant="h3" className={clsx(classes.text, classes.rightAlign, classes.aniFirst)}>
+            <Typography variant="h3" className={clsx(classes.profileText, classes.rightAlign, classes.aniFirst)}>
               my name is <span className={classes.green}>Ian Pollack</span>.
           </Typography>
-            <Typography variant="h3" className={clsx(classes.text, classes.aniSecond)}>
+            <Typography variant="h3" className={clsx(classes.profileText, classes.aniSecond)}>
               i&apos;m formerly a baby,
           </Typography>
-            <Typography variant="h3" className={clsx(classes.text, classes.rightAlign, classes.aniThird)}>
+            <Typography variant="h3" className={clsx(classes.profileText, classes.rightAlign, classes.aniThird)}>
               and currently a <span className={classes.green}>Software Engineer</span>.
           </Typography>
           </Grid>
@@ -167,11 +179,10 @@ const Index = () => {
               <Typography variant="h3" id="profile" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
                 profile<span className={classes.green}>.</span>
               </Typography>
-
-              <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
+              <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)} style={{maxWidth: '85%'}}>
                 <br />
                 <div>
-                  Hey there! My name's Ian and I'm a Software Engineer with a passion to be part of a team that builds great products, and a love for creative thinking and solving real-life problems through code. I want to help build a cohesive and efficient team working towards growing an organization I am proud to be a part of.
+                  Hey there! My name's Ian and I'm a Full-Stack Software Engineer with a passion to be part of a team that builds great products, and a love for creative thinking and solving real-life problems through code. I want to help build a cohesive and efficient team working towards growing an organization I am proud to be a part of.
                 </div>
                 <br />
                 <div>
@@ -181,10 +192,10 @@ const Index = () => {
                 <div>
                   In my free time, I perform improv and standup comedy, deal craps and blackjack, and play the ukulele. I love baseball, "Survivor", and playing board games with friends.
                 </div>
-                <div>
+                {/* <div>
                   Here's a list of the languages/libraries I've worked with:
                   Angular, AWS, CSS, Django, Git, GoLang, HTML, JavaScript, Jest, jQuery, Material-UI, MySQL, Next, Postgres, Prawn, Python, Rails, React, Redis, Redux, RSpec, Ruby, Sass, Semantic, SQL, TypeScript, Vue, and Wordpress
-                </div>
+                </div> */}
               </Typography>
             </div>
             <div className={clsx(classes.marginCenter, classes.aniRest)}>
@@ -196,12 +207,62 @@ const Index = () => {
             </div>
           </Grid>
         </Grid>
+        <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
+        <Grid container spacing={2}>
+            <Grid item xs={12} md={4}>
+              <ul>
+                <li>React.js | Next.js | Redux.js</li>
+                <li>JavaScript | TypeScript</li>
+                <li>Node.js | Express</li>
+                <li>Ruby | Rails</li>
+                <li>Python | Django | Wagtail</li>
+                <li>HTML | CSS | Sass (SCSS)</li>
+              </ul>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <ul>
+                <li>SQL | PostgreSQL | MySQL</li>
+                <li>NoSQL | Redis</li>
+                <li>AWS | DigitalOcean | Azure</li>
+                <li>Heroku | Vercel | Render</li>
+                <li>Material-UI | Semantic | Tailwind</li>
+                <li>Jest | Rspec | Splunk | Winston</li>
+              </ul>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <ul>
+                <li>Git | Github | GitLab | Bitbucket</li>
+                <li>Github Actions | CircleCI | Jenkins</li>
+                <li>OpenAI | Azure-AI | PyTorch</li>
+                <li>Hugging Face | Llama 2 | Webpack</li>
+                <li>Docker | Celery | Nginx | Wordpress</li>
+                <li>GoLang | Vue.js | Angular ({'<'} 1 year)</li>
+              </ul>
+            </Grid>
+          </Grid>
+        </Typography>
         <Grid container item className={classes.container} xs={12}>
           <Grid item xs={12}>
             <Typography variant="h3" id="experience" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
               experience<span className={classes.green}>.</span>
             </Typography>
             <br />
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
+              <Link href="https://www.scsitesting.com/" target="_blank" className={clsx(classes.link, classes.green)}>
+                Southern California School of Interpretation
+              </Link>
+            </Typography>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
+              {/* <br /> */}
+              <ul>
+                <li className={classes.listItem}>Designed, built, and maintained the Sabio AI web application, which supports the management, testing, and grading of interpreter students and interpreters seeking re-certification, leveraging AI integrations for enhanced functionality.</li>
+                <li className={classes.listItem}>Developed and managed the Sabio AI backend architecture using Node.js, Express, and TypeScript, integrating with external systems like OpenAI, Vimeo, Synthesia, and other tools to streamline workflows and enhance automation.</li>
+                <li className={classes.listItem}>Built a responsive and intuitive frontend UI application with React.js, Next.js, and Material-UI, optimizing and creating an excellent user experience for both testers and students.</li>
+                <li className={classes.listItem}>Designed and managed a robust PostgreSQL database, enforcing data integrity and seamless interactions between frontend and backend systems.</li>
+                <li className={classes.listItem}>Managed deployment processes through Github Actions, ensuring streamlined and automated deployments, and set up server health monitoring to maintain optimal performance.</li>
+                <li className={classes.listItem}>Led sprint demos, clearly presenting progress and plans for future sprints while resolving legacy system issues using WordPress, Caspio, Zapier, and other platforms to ensure stability and improvement.</li>
+              </ul>
+            </Typography>
             <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
               <Link href="https://www.hp.com/" target="_blank" className={clsx(classes.link, classes.green)}>
                 HP
@@ -210,14 +271,14 @@ const Index = () => {
             <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
               {/* <br /> */}
               <ul>
-                <li className={classes.listItem}>Maintained and managed HP’s Cloud Bank payment processing system and invoice/PDF creation and archiving for their Instant Ink service and other HP services.</li>
+                <li className={classes.listItem}>Maintained and managed HP's Cloud Bank payment processing system and invoice/PDF creation and archiving for their Instant Ink service and other HP services.</li>
                 <li className={classes.listItem}>Programmed in Ruby on Rails to build new feature requests and bug fixes, including new API endpoints and their Swagger docs, payload responses, data privacy and encryption, and application deployment.</li>
                 <li className={classes.listItem}>Operated as a Technical Lead to field questions and offer code feedback on PR reviews, and coordinated future sprint planning.</li>
                 <li className={classes.listItem}>Established clear communication between teams to ensure tasks are clearly understood and remain unblocked.</li>
                 <li className={classes.listItem}>Collaborated with Development team to unblock various issues and ensure work is completed by sprint deadlines.</li>
                 <li className={classes.listItem}>Designed future service workflows for Project Architect.</li>
                 <li className={classes.listItem}>Entrusted to interview future candidates for team growth and development.</li>
-                <li className={classes.listItem}>Work with QA team to ensure bugs are found and fixed, and put out “fires”.</li>
+                <li className={classes.listItem}>Work with QA team to ensure bugs are found and fixed, and put out "fires".</li>
               </ul>
             </Typography>
             <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
@@ -248,6 +309,32 @@ const Index = () => {
           <Grid item xs={12}>
             <Typography variant="h3" id="projects" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
               projects<span className={classes.green}>.</span>
+            </Typography>
+            <br />
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.smPadBottom, classes.aniRest)}>
+              <Link href="https://ai-chat-bot-qn88.onrender.com/" target="_blank" className={clsx(classes.link, classes.green)}>
+                AI Chat-Bot
+              </Link>
+            </Typography>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.list, classes.aniRest)}>
+              <div className={classes.smPadBottom}>
+                Built with React.js, Vite, and CSS to allow users to have and save multiple conversations with an AI Chat agent.              </div>
+              <div className={classes.smPadBottom}>
+                Integrated with OpenAI's ChatGPT API and persists data in browser's local storage.
+              </div>
+            </Typography>
+            <br />
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.smPadBottom, classes.aniRest)}>
+              <Link href="https://weather-app-rzgs.onrender.com/" target="_blank" className={clsx(classes.link, classes.green)}>
+                Weather App
+              </Link>
+            </Typography>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.list, classes.aniRest)}>
+              <div className={classes.smPadBottom}>
+                Built with React.js, Vite, and CSS as a quick and easy live weather search by city.              </div>
+              <div className={classes.smPadBottom}>
+                Styled dynamically by searched city's forecast, with an imperial and metric toggle.
+              </div>
             </Typography>
             <br />
             <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.smPadBottom, classes.aniRest)}>

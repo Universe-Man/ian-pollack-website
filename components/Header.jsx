@@ -292,7 +292,7 @@ export default function MenuAppBar() {
           className={clsx(classes.linkButtons, classes.aniFourth, classes.border)}
           componenttype="button"
           variant="outlined"
-          href="/documents/IanPollackSoftwareEngineerResume-3-Fall2024.pdf"
+          href="/documents/IanPollack-FullStackSoftwareEngineer-Resume-1-Spring2025.pdf"
           target="_blank"
         >
           Resume
