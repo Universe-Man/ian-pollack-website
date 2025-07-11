@@ -68,6 +68,12 @@ const useStyles = makeStyles(() => ({
   bodyText: {
     // marginLeft: '0',
   },
+  skills: {
+    width: '90%'
+  },
+  jobTitle: {
+    fontSize: '1.75rem'
+  },
   rightAlign: {
     textAlign: 'unset',
     [theme.breakpoints.up('md')]: {
@@ -179,23 +185,23 @@ const Index = () => {
               <Typography variant="h3" id="profile" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
                 profile<span className={classes.green}>.</span>
               </Typography>
-              <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)} style={{maxWidth: '85%'}}>
+              <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)} style={{ maxWidth: '85%' }}>
                 <br />
                 <div>
-                  Hey there! My name's Ian and I'm a Full-Stack Software Engineer with a passion to be part of a team that builds great products, and a love for creative thinking and solving real-life problems through code. I want to help build a cohesive and efficient team working towards growing an organization I am proud to be a part of.
+                  Hey there! My name's Ian and I'm a Full-Stack Software Engineer with over six years of professional experience delivering scalable, user-centric applications across healthcare, social networking, hospitality, education, and fin-tech industries.
                 </div>
                 <br />
                 <div>
-                  I have experience wearing multiple hats, driving a project forward and facilitating its progress to launch as both an Engineer and a Project Manager, have clear and effective communication skills, conveying project progress concisely to Leadership and clients, and I'm eager to continue to learn and grow.
+                  I'm proficient in a wide range of languages and frameworks, with a strong focus and passion for clean, maintainable code and intuitive user experiences, as well as a proven track record in leading development teams, mentoring engineers, and driving product excellence.
                 </div>
                 <br />
                 <div>
-                  In my free time, I perform improv and standup comedy, deal craps and blackjack, and play the ukulele. I love baseball, "Survivor", and playing board games with friends.
+                  During my free time, in addition to building new hobby projects with the newest tech stacks, I perform improv and standup comedy, deal craps and blackjack, and play the ukulele. I love baseball, "Survivor", and the occasional action-comedy.
                 </div>
-                {/* <div>
-                  Here's a list of the languages/libraries I've worked with:
-                  Angular, AWS, CSS, Django, Git, GoLang, HTML, JavaScript, Jest, jQuery, Material-UI, MySQL, Next, Postgres, Prawn, Python, Rails, React, Redis, Redux, RSpec, Ruby, Sass, Semantic, SQL, TypeScript, Vue, and Wordpress
-                </div> */}
+                <br />
+                <div>
+                  Feel free to contact with me on LinkedIn or shoot me an email (links are in the footer). I'd love to connect and talk all things code (and baseball).
+                </div>
               </Typography>
             </div>
             <div className={clsx(classes.marginCenter, classes.aniRest)}>
@@ -207,40 +213,39 @@ const Index = () => {
             </div>
           </Grid>
         </Grid>
-        <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
-        <Grid container spacing={2}>
-            <Grid item xs={12} md={4}>
-              <ul>
-                <li>React.js | Next.js | Redux.js</li>
-                <li>JavaScript | TypeScript</li>
-                <li>Node.js | Express</li>
-                <li>Ruby | Rails</li>
-                <li>Python | Django | Wagtail</li>
-                <li>HTML | CSS | Sass (SCSS)</li>
-              </ul>
+        <Grid container className={classes.container} xs={12}>
+          <Typography variant="h3" id="profile" className={clsx(classes.text, classes.skills, classes.smPadBottom, classes.aniRest)}>
+            technical skills<span className={classes.green}>.</span>
+          </Typography>
+          <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.skills, classes.aniRest)}>
+            <Grid container item spacing={2}>
+              <Grid item xs={12} md={4}>
+                <ul>
+                  <li>React.js | Next.js | Redux.js</li>
+                  <li>JavaScript | TypeScript</li>
+                  <li>Node.js | Express</li>
+                  <li>Ruby | Rails</li>
+                </ul>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <ul>
+                  <li>Python | Django | Wagtail</li>
+                  <li>HTML | CSS | Sass (SCSS)</li>
+                  <li>SQL | PostgreSQL | MySQL</li>
+                  <li>NoSQL | Redis</li>
+                </ul>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <ul>
+                  <li>AWS | Heroku | Azure</li>
+                  <li>Docker | GitHub | CI/CD</li>
+                  <li>OpenAI | PyTorch</li>
+                  <li>Jest | RSpec | Splunk</li>
+                </ul>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={4}>
-              <ul>
-                <li>SQL | PostgreSQL | MySQL</li>
-                <li>NoSQL | Redis</li>
-                <li>AWS | DigitalOcean | Azure</li>
-                <li>Heroku | Vercel | Render</li>
-                <li>Material-UI | Semantic | Tailwind</li>
-                <li>Jest | Rspec | Splunk | Winston</li>
-              </ul>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <ul>
-                <li>Git | Github | GitLab | Bitbucket</li>
-                <li>Github Actions | CircleCI | Jenkins</li>
-                <li>OpenAI | Azure-AI | PyTorch</li>
-                <li>Hugging Face | Llama 2 | Webpack</li>
-                <li>Docker | Celery | Nginx | Wordpress</li>
-                <li>GoLang | Vue.js | Angular ({'<'} 1 year)</li>
-              </ul>
-            </Grid>
-          </Grid>
-        </Typography>
+          </Typography>
+        </Grid>
         <Grid container item className={classes.container} xs={12}>
           <Grid item xs={12}>
             <Typography variant="h3" id="experience" className={clsx(classes.text, classes.smPadBottom, classes.aniRest)}>
@@ -249,18 +254,18 @@ const Index = () => {
             <br />
             <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
               <Link href="https://www.scsitesting.com/" target="_blank" className={clsx(classes.link, classes.green)}>
-                Southern California School of Interpretation
+                SCSI Media
               </Link>
             </Typography>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.jobTitle, classes.aniRest)}>
+              Full-Stack Software Engineer
+            </Typography>
             <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
-              {/* <br /> */}
               <ul>
-                <li className={classes.listItem}>Designed, built, and maintained the Sabio AI web application, which supports the management, testing, and grading of interpreter students and interpreters seeking re-certification, leveraging AI integrations for enhanced functionality.</li>
-                <li className={classes.listItem}>Developed and managed the Sabio AI backend architecture using Node.js, Express, and TypeScript, integrating with external systems like OpenAI, Vimeo, Synthesia, and other tools to streamline workflows and enhance automation.</li>
-                <li className={classes.listItem}>Built a responsive and intuitive frontend UI application with React.js, Next.js, and Material-UI, optimizing and creating an excellent user experience for both testers and students.</li>
-                <li className={classes.listItem}>Designed and managed a robust PostgreSQL database, enforcing data integrity and seamless interactions between frontend and backend systems.</li>
-                <li className={classes.listItem}>Managed deployment processes through Github Actions, ensuring streamlined and automated deployments, and set up server health monitoring to maintain optimal performance.</li>
-                <li className={classes.listItem}>Led sprint demos, clearly presenting progress and plans for future sprints while resolving legacy system issues using WordPress, Caspio, Zapier, and other platforms to ensure stability and improvement.</li>
+                <li className={classes.listItem}>Co-designed and developed the Sabio AI web application with a responsive, accessible frontend built in React.js, Next.js, and Material-UI, enabling efficient management, testing, and certification of interpreter students and professionals through AI-enhanced features.</li>
+                <li className={classes.listItem}>Engineered and scaled backend architecture using Node.js, Express, and TypeScript, integrating third-party platforms such as OpenAI, Vimeo, and Synthesia to automate workflows and reduce manual overhead.</li>
+                <li className={classes.listItem}> Architected a robust PostgreSQL database, ensuring data consistency and efficient communication across system components while supporting dynamic user interactions.</li>
+                <li className={classes.listItem}>Maintained legacy systems by troubleshooting and resolving issues using WordPress, Caspio, Zapier, and related tools, significantly improving platform stability and long-term maintainability.</li>
               </ul>
             </Typography>
             <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
@@ -268,17 +273,16 @@ const Index = () => {
                 HP
               </Link>
             </Typography>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.jobTitle, classes.aniRest)}>
+              Senior Software Engineer / Technical Lead
+            </Typography>
             <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
-              {/* <br /> */}
               <ul>
-                <li className={classes.listItem}>Maintained and managed HP's Cloud Bank payment processing system and invoice/PDF creation and archiving for their Instant Ink service and other HP services.</li>
-                <li className={classes.listItem}>Programmed in Ruby on Rails to build new feature requests and bug fixes, including new API endpoints and their Swagger docs, payload responses, data privacy and encryption, and application deployment.</li>
-                <li className={classes.listItem}>Operated as a Technical Lead to field questions and offer code feedback on PR reviews, and coordinated future sprint planning.</li>
-                <li className={classes.listItem}>Established clear communication between teams to ensure tasks are clearly understood and remain unblocked.</li>
-                <li className={classes.listItem}>Collaborated with Development team to unblock various issues and ensure work is completed by sprint deadlines.</li>
-                <li className={classes.listItem}>Designed future service workflows for Project Architect.</li>
-                <li className={classes.listItem}>Entrusted to interview future candidates for team growth and development.</li>
-                <li className={classes.listItem}>Work with QA team to ensure bugs are found and fixed, and put out "fires".</li>
+                <li className={classes.listItem}>Optimized HP’s Cloud Bank payment processing platform by streamlining invoice/PDF generation and archiving workflows, reducing financial processing errors by 20% and enhancing the purchasing experience for millions of global customers.</li>
+                <li className={classes.listItem}>Led a team of 5 developers as Technical Lead, conducting code reviews, pair programming sessions, and daily stand-ups, ensuring consistent delivery ahead of schedule and promoting team skill growth.</li>
+                <li className={classes.listItem}>Developed new features and resolved bugs using Ruby on Rails, Prawn, and Sidekiq, delivering secure, scalable updates that aligned with stakeholder goals and improved user satisfaction.</li>
+                <li className={classes.listItem}>Monitored and managed production infrastructure (AWS, Jenkins, Splunk), leading root-cause analysis and post-mortems that resulted in a 50% increase in system error resolution.</li>
+                <li className={classes.listItem}>Collaborated cross-functionally with Project Architects and Project Managers to align sprint planning and product roadmaps with long-term goals; actively contributed to hiring by interviewing 5+ candidates and shaping on-boarding.</li>
               </ul>
             </Typography>
             <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
@@ -286,21 +290,37 @@ const Index = () => {
                 Lightmatter
               </Link>
             </Typography>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.jobTitle, classes.aniRest)}>
+              Software Engineer
+            </Typography>
             <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
-              {/* <br /> */}
               <ul>
-                <li className={classes.listItem}>Built "Save Your City" website using Next.js/React, and Django/Wagtail; the site collects donations to support NYC businesses negatively affected by COVID-19.</li>
-                <li className={classes.listItem}>Built new frontend components, page templates, and features to complete client requests (HTML, React.js, Django, Wagtail, WordPress).</li>
-                <li className={classes.listItem}>Used CSS and applicable libraries (Sass, MUI, etc.) to style client work to match UI/UX designer's mock-up.</li>
-                <li className={classes.listItem}>Updated website content via code changes or WordPress management to support clients with new promos, specials, and business decisions.</li>
-                <li className={classes.listItem}>Displayed excellent communication with clients and co-workers by posing questions to ensure a clear understanding of a client’s needs, as well as with the internal team to unblock developers and ensure a sprint’s success.</li>
-                <li className={classes.listItem}>Proven experience live-demoing ticketed work in sprint syncs with clients.</li>
-                <li className={classes.listItem}>Consulted, supported, and maintained various websites taking care of SSL certificates, domain/hosting renewals, databases, etc.</li>
-                <li className={classes.listItem}>Oversaw completion of client work and ensured project sprints go smoothly and deadlines are met.</li>
-                <li className={classes.listItem}>Managed client relationships by sending sprint agenda/summary emails.</li>
-                <li className={classes.listItem}>Prepped upcoming sprint work by getting priorities from clients and creating tickets for developers.</li>
-                <li className={classes.listItem}>Scheduled and ran client sprint sync meeting to demo client work, etc.</li>
-                <li className={classes.listItem}>Supported blocked developers by getting assets, media, or decisions from the client.</li>
+                <li className={classes.listItem}>Led full-cycle development for client projects, including a resort booking platform, increasing reservations by 14%, using diverse tech stacks including React.js, Next.js, Django, and Wagtail to deliver high-performance, scalable, user-friendly web applications that aligned with business goals and exceeded client expectations.</li>
+                <li className={classes.listItem}>Provided “white-glove” customer-service by keeping clients up to speed on projects through regular meetings, live demos, and agile feedback loops, effectively translating client feedback into actionable development tasks, managing scope changes, aligning priorities, removing blockers, and ensuring on-time, on-budget delivery of complex features.</li>
+                <li className={classes.listItem}>Rapidly diagnosed and resolved production issues, including system outages and performance bottlenecks, implementing permanent fixes and minimizing downtime to maintain client trust and system reliability.</li>
+                <li className={classes.listItem}>Ensured application stability and code quality throughout the development lifecycle by triaging and resolving bugs, implementing new features, and conducting code reviews to support clean, maintainable codebases.</li>
+              </ul>
+            </Typography>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
+              University of Hawaii - School of Medicine
+            </Typography>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.jobTitle, classes.aniRest)}>
+              Software Engineer
+            </Typography>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
+              <ul>
+                <li className={classes.listItem}>Developed and integrated custom JavaScript within Qualtrics to calculate user scores and averages, enabling real-time feedback upon survey completion.</li>
+              </ul>
+            </Typography>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
+              VisionFriendly.com
+            </Typography>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.jobTitle, classes.aniRest)}>
+              Software Engineer
+            </Typography>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
+              <ul>
+                <li className={classes.listItem}>Developed and maintained full-stack web applications using Next.js, React.js, Django, Wagtail, CSS/Sass, with Salesforce integration and automated deployment via CircleCI and AWS.</li>
               </ul>
             </Typography>
           </Grid>
@@ -318,9 +338,7 @@ const Index = () => {
             </Typography>
             <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.list, classes.aniRest)}>
               <div className={classes.smPadBottom}>
-                Built with React.js, Vite, and CSS to allow users to have and save multiple conversations with an AI Chat agent.              </div>
-              <div className={classes.smPadBottom}>
-                Integrated with OpenAI's ChatGPT API and persists data in browser's local storage.
+                AI Chat-Bot is a chat portal that allows users to create and save different chat conversations with an AI Agent powered by OpenAI's LLM ChatGPT.
               </div>
             </Typography>
             <br />
@@ -331,9 +349,7 @@ const Index = () => {
             </Typography>
             <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.list, classes.aniRest)}>
               <div className={classes.smPadBottom}>
-                Built with React.js, Vite, and CSS as a quick and easy live weather search by city.              </div>
-              <div className={classes.smPadBottom}>
-                Styled dynamically by searched city's forecast, with an imperial and metric toggle.
+                Weather App, as the name suggests, is a quick and easy live weather search by city, styled dynamically based on the city's current forecast.
               </div>
             </Typography>
             <br />
@@ -344,14 +360,7 @@ const Index = () => {
             </Typography>
             <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.list, classes.aniRest)}>
               <div className={classes.smPadBottom}>
-                Save Your City is a non-profit website build to help NYC businesses struggling from the fallout of the COVID-19 pandemic.
-              </div>
-              <div className={classes.smPadBottom}>
-                Users are able to nominate any local business they frequent and donate to them.
-                The site was build with Next.js/React and Django/Wagtail CMS. It's integrated with a zip codes API and Stripe to search for businesses and submit donations.
-              </div>
-              <div className={classes.smPadBottom}>
-                The site also recorded all nomination and donation submissions into its own database for reference during donation payouts and future marketing.
+                Save Your City is a non-profit website build to help NYC businesses struggling from the fallout of the COVID-19 pandemic with the goal of allowing customers to donate to their favorite businesses to help keep them afloat during the lock-down.
               </div>
             </Typography>
             <br />
@@ -362,7 +371,7 @@ const Index = () => {
             </Typography>
             <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.list, classes.aniRest)}>
               <div className={classes.smPadBottom}>
-                Forgetful Notes is a useless notes app that will gradually forget your notes as you continue to add them. This app was build with Next.js and React, and as you use it, just remember it's doing its best.
+                Forgetful Notes is a notes app that is trying really hard guys. It will probably forget your notes as you continue to add them, but just remember it's doing its best.
               </div>
             </Typography>
           </Grid>
