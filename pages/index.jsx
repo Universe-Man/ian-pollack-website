@@ -219,26 +219,40 @@ const Index = () => {
           </Typography>
           <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.skills, classes.aniRest)}>
             <Grid container item spacing={2}>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={3}>
                 <ul>
-                  <li className={classes.listItem}>React.js | Next.js | Redux</li>
+                  <li className={classes.listItem}>React.js | Next.js</li>
                   <li className={classes.listItem}>JavaScript | TypeScript</li>
                   <li className={classes.listItem}>React Native | iOS | Android</li>
+                  <li className={classes.listItem}>Python | Django | Wagtail</li>
                   <li className={classes.listItem}>Node.js | Express</li>
-                  <li className={classes.listItem}>Ruby | Rails</li>
-                  <li className={classes.listItem}>AWS | Heroku | Azure</li>
-                  <li className={classes.listItem}>Docker | GitHub</li>
                 </ul>
               </Grid>
-              <Grid item xs={12} md={5}>
+              <Grid item xs={12} md={3}>
                 <ul>
-                  <li className={classes.listItem}>Python | Django | Wagtail</li>
+                  <li className={classes.listItem}>Ruby | Rails</li>
                   <li className={classes.listItem}>HTML | CSS | Sass (SCSS)</li>
                   <li className={classes.listItem}>SQL | PostgreSQL | MySQL</li>
                   <li className={classes.listItem}>NoSQL | Redis | MongoDB</li>
+                  <li className={classes.listItem}>Redux | Context | Zustand</li>
+                </ul>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <ul>
+                  <li className={classes.listItem}>AWS | Azure | GCP</li>
+                  <li className={classes.listItem}>Heroku | Render | Vercel</li>
+                  <li className={classes.listItem}>Git | GitHub</li>
+                  <li className={classes.listItem}>Docker | Kubernetes</li>
+                  <li className={classes.listItem}>Atlassian | Jira | Confluence</li>
+                </ul>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <ul>
+                  <li className={classes.listItem}>CI/CD | GitHub Actions</li>
+                  <li className={classes.listItem}>Jenkins | CircleCI</li>
                   <li className={classes.listItem}>OpenAI | PyTorch</li>
-                  <li className={classes.listItem}>Jest | RSpec | Splunk</li>
-                  <li className={classes.listItem}>CI/CD | Jenkins | GitHub Actions</li>
+                  <li className={classes.listItem}>Jest | Pytest | RSpec</li>
+                  <li className={classes.listItem}>Splunk | Grafana</li>
                 </ul>
               </Grid>
             </Grid>
