@@ -188,7 +188,7 @@ const Index = () => {
               <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)} style={{ maxWidth: '85%' }}>
                 <br />
                 <div>
-                  Hey there! My name's Ian and I'm a Full-Stack Software Engineer with over six years of professional experience delivering scalable, user-centric applications across healthcare, social networking, hospitality, education, and fin-tech industries.
+                  Hey there! My name's Ian and I'm a Senior Software Engineer with over seven years of experience delivering scalable, user-centric, full-stack applications across healthcare, social networking, security, hospitality, education, fin-tech, and AI industries.
                 </div>
                 <br />
                 <div>
@@ -219,28 +219,26 @@ const Index = () => {
           </Typography>
           <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.skills, classes.aniRest)}>
             <Grid container item spacing={2}>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={6}>
                 <ul>
-                  <li>React.js | Next.js | Redux.js</li>
-                  <li>JavaScript | TypeScript</li>
-                  <li>Node.js | Express</li>
-                  <li>Ruby | Rails</li>
+                  <li className={classes.listItem}>React.js | Next.js | Redux</li>
+                  <li className={classes.listItem}>JavaScript | TypeScript</li>
+                  <li className={classes.listItem}>React Native | iOS | Android</li>
+                  <li className={classes.listItem}>Node.js | Express</li>
+                  <li className={classes.listItem}>Ruby | Rails</li>
+                  <li className={classes.listItem}>AWS | Heroku | Azure</li>
+                  <li className={classes.listItem}>Docker | GitHub</li>
                 </ul>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={5}>
                 <ul>
-                  <li>Python | Django | Wagtail</li>
-                  <li>HTML | CSS | Sass (SCSS)</li>
-                  <li>SQL | PostgreSQL | MySQL</li>
-                  <li>NoSQL | Redis</li>
-                </ul>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <ul>
-                  <li>AWS | Heroku | Azure</li>
-                  <li>Docker | GitHub | CI/CD</li>
-                  <li>OpenAI | PyTorch</li>
-                  <li>Jest | RSpec | Splunk</li>
+                  <li className={classes.listItem}>Python | Django | Wagtail</li>
+                  <li className={classes.listItem}>HTML | CSS | Sass (SCSS)</li>
+                  <li className={classes.listItem}>SQL | PostgreSQL | MySQL</li>
+                  <li className={classes.listItem}>NoSQL | Redis | MongoDB</li>
+                  <li className={classes.listItem}>OpenAI | PyTorch</li>
+                  <li className={classes.listItem}>Jest | RSpec | Splunk</li>
+                  <li className={classes.listItem}>CI/CD | Jenkins | GitHub Actions</li>
                 </ul>
               </Grid>
             </Grid>
@@ -252,6 +250,23 @@ const Index = () => {
               experience<span className={classes.green}>.</span>
             </Typography>
             <br />
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
+              <Link href="https://www.deepsentinel.com/" target="_blank" className={clsx(classes.link, classes.green)}>
+                Deep Sentinel
+              </Link>
+            </Typography>
+            <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.jobTitle, classes.aniRest)}>
+              Senior Software Engineer
+            </Typography>
+            <Typography variant="h5" className={clsx(classes.text, classes.bodyText, classes.aniRest)}>
+              <ul>
+                <li className={classes.listItem}>Contributed to the development of cloud-deployed, mission-critical applications supporting largescale video delivery and security monitoring systems.</li>
+                <li className={classes.listItem}>Designed and implemented backend services in Python within a microservices architecture integrated with MySQL, PostgreSQL, and Redis.</li>
+                <li className={classes.listItem}>Supported development of the Service License Management system (SLM), improving dealer billing workflows and visibility into licensing and subscription management.</li>
+                <li className={classes.listItem}>Built and enhanced end-user features across React and React Native applications, focusing on performance and maintainability.</li>
+                <li className={classes.listItem}>Collaborated cross-functionally with product, QA, and distributed engineering teams to take features from design through deployment in a fast-moving startup environment.</li>
+              </ul>
+            </Typography>
             <Typography variant="h4" className={clsx(classes.text, classes.bodyText, classes.green, classes.aniRest)}>
               <Link href="https://www.scsitesting.com/" target="_blank" className={clsx(classes.link, classes.green)}>
                 SCSI Media

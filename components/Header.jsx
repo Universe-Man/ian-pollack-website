@@ -233,7 +233,7 @@ export default function MenuAppBar() {
                 onClick={event =>
                   handleMenuCloseWithLink({
                     event,
-                    link: '/documents/IanPollack-FullStackSoftwareEngineer-Resume-5-Spring2025.pdf',
+                    link: '/documents/IanPollack-SeniorSoftwareEngineer-Resume-1-Winter2026.pdf',
                     target: '_blank',
                   })
                 }
@@ -292,7 +292,7 @@ export default function MenuAppBar() {
           className={clsx(classes.linkButtons, classes.aniFourth, classes.border)}
           componenttype="button"
           variant="outlined"
-          href="/documents/IanPollack-FullStackSoftwareEngineer-Resume-5-Spring2025.pdf"
+          href="/documents/IanPollack-SeniorSoftwareEngineer-Resume-1-Winter2026.pdf"
           target="_blank"
         >
           Resume
